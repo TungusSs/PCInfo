@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net.NetworkInformation;
-using System.Text;
-using System.Windows.Forms;
-
-namespace OpenPCINFO
+﻿namespace OpenPCINFO
 {
     // класс для полей
     class NetworkInfo
