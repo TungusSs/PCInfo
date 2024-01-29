@@ -85,5 +85,12 @@ namespace PCInfos
             flowLayoutPanel1.Controls.Add(mi);
             mi.BringToFront();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            SettingsUI st = new SettingsUI();
+            flowLayoutPanel1.Controls.Add(st);
+            st.BringToFront();
+        }
     }
 }

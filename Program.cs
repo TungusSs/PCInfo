@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PCInfos.Classes;
+using System;
 using System.Diagnostics;
 using System.Linq;
 using System.Security.Principal;
@@ -14,6 +15,7 @@ namespace PCInfos
         [STAThread]
         static void Main()
         {
+
             // Проверяем, запущено ли приложение с правами администратора
             if (!IsRunAsAdmin())
             {
@@ -31,10 +33,19 @@ namespace PCInfos
             }
             else
             {
-                // Запускаем главное окно приложения
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new Main());
+                if (SettingsHelper.getVisualGui())
+                {
+                    // Запускаем главное окно приложения
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new ModernForm());
+                }
+                else
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new Main());
+                }
             }
         }
 
