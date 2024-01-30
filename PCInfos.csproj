@@ -266,6 +266,7 @@
     <None Include="bin\Debug\icons\intel.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="icons\download.png" />
     <None Include="bin\Debug\icons\download.png" />
     <Content Include="Bunifu_UI_v1.5.3.dll" />
     <Content Include="favicon.ico" />
