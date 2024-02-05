@@ -116,7 +116,7 @@
             // 
             // saveButton
             // 
-            this.saveButton.Image = global::PCInfos.Properties.Resources.download;
+            this.saveButton.Image = global::PCInfos.Properties.Resources.download1;
             this.saveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.saveButton.Location = new System.Drawing.Point(437, 17);
             this.saveButton.Name = "saveButton";

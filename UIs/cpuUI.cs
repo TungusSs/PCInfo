@@ -49,6 +49,7 @@ namespace PCInfos.UIs
                 if (manufacturer.Contains("intel"))
                 {
                     pictureBox1.Image = Properties.Resources.intel;
+                    
                 }
                 else if (manufacturer.Contains("amd"))
                 {
