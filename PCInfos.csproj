@@ -90,6 +90,7 @@
     <Compile Include="Classes\CpuTemperatureReader.cs" />
     <Compile Include="Classes\DiskInfo.cs" />
     <Compile Include="Classes\SettingsHelper.cs" />
+    <Compile Include="Classes\UI\Theme.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +264,7 @@
     <None Include="bin\Debug\icons\intel.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\download_down_arrow_save_icon_145992.png" />
     <None Include="icons\download.png" />
     <None Include="bin\Debug\icons\download.png" />
     <Content Include="Bunifu_UI_v1.5.3.dll" />

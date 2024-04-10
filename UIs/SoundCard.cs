@@ -26,7 +26,8 @@ namespace PCInfos.UIs
             tabControl1.TabPages.Clear();
             // Создаем объект для поиска информации о звуковых устройствах в системе
             ManagementObjectSearcher myAudioObject = new ManagementObjectSearcher("select * from Win32_SoundDevice");
-
+            bool isDarkTheme = Theme.IsDarkTheme();
+            Theme theme = new Theme(isDarkTheme);
             // Перебираем все найденные звуковые устройства
             foreach (ManagementObject obj in myAudioObject.Get())
             {
@@ -43,8 +44,9 @@ namespace PCInfos.UIs
                              "Поддержка управления питанием: " + obj["PowerManagementSupported"] + "\n" +
                              "Статус: " + obj["Status"] + "\n" +
                              "Информация о статусе: " + obj["StatusInfo"];
-
                 // Добавляем label на tabPage
+                tabPage.BackColor = theme.getBackColor();
+                tabPage.ForeColor = theme.getForeColor();
                 tabPage.Controls.Add(label);
 
                 // Добавляем tabPage на tabControl

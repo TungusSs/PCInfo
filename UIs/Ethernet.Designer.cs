@@ -62,6 +62,7 @@
             // 
             // netList
             // 
+            this.netList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.netList.HideSelection = false;
             this.netList.Location = new System.Drawing.Point(6, 24);
             this.netList.Name = "netList";
