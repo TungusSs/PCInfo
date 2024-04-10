@@ -1,5 +1,4 @@
 ﻿using PCInfos.UIs;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace PCInfos
@@ -10,6 +9,7 @@ namespace PCInfos
         {
             InitializeComponent();
             loadTheme();
+            user.Text = CollectSystemInfo.GetUserNameAndPcName();
         }
 
         private void loadTheme()

@@ -57,9 +57,9 @@ namespace PCInfos.UIs
                 {
                     Text = temperatures.name
                 };
-                cpu_item.SubItems.Add(temperatures.value + " °C");
-                cpu_item.SubItems.Add(temperatures.minvalue + " °C");
-                cpu_item.SubItems.Add(temperatures.maxvalue + " °C");
+                cpu_item.SubItems.Add($"{temperatures.value:F1} °C");
+                cpu_item.SubItems.Add($"{temperatures.minvalue:F1} °C");
+                cpu_item.SubItems.Add($"{temperatures.maxvalue:F1} °C");
                 tempList.Items.Add(cpu_item);
             }
 
@@ -93,9 +93,9 @@ namespace PCInfos.UIs
                 }
 
                 // Обновляем значения температур в списке
-                tempList.Items[i].SubItems[1].Text = temperatures.value + " °C";
-                tempList.Items[i].SubItems[2].Text = temperatures.minvalue + " °C";
-                tempList.Items[i].SubItems[3].Text = temperatures.maxvalue + " °C";
+                tempList.Items[i].SubItems[1].Text = $"{temperatures.value:F1} °C";
+                tempList.Items[i].SubItems[2].Text = $"{temperatures.minvalue:F1} °C";
+                tempList.Items[i].SubItems[3].Text = $"{temperatures.maxvalue:F1} °C";
 
                 i++;
             }

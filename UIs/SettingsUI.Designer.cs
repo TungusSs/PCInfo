@@ -37,7 +37,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.modernstyyleCheck);
-            this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(17, 35);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(550, 82);
@@ -50,7 +50,7 @@
             this.modernstyyleCheck.AutoSize = true;
             this.modernstyyleCheck.Location = new System.Drawing.Point(21, 36);
             this.modernstyyleCheck.Name = "modernstyyleCheck";
-            this.modernstyyleCheck.Size = new System.Drawing.Size(179, 21);
+            this.modernstyyleCheck.Size = new System.Drawing.Size(195, 21);
             this.modernstyyleCheck.TabIndex = 0;
             this.modernstyyleCheck.Text = "Включить стиль modern";
             this.modernstyyleCheck.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(13, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(90, 19);
             this.label1.TabIndex = 30;
             this.label1.Text = "Настройки";
             // 
