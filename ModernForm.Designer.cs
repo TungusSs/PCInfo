@@ -179,9 +179,10 @@
             this.panelmainBtnOn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.panelmainBtnOn.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelmainBtnOn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
-            this.panelmainBtnOn.Font = new System.Drawing.Font("JetBrains Mono", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panelmainBtnOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelmainBtnOn.ForeColor = System.Drawing.Color.White;
-            this.panelmainBtnOn.Location = new System.Drawing.Point(3, 3);
+            this.panelmainBtnOn.Location = new System.Drawing.Point(3, 27);
+            this.panelmainBtnOn.Margin = new System.Windows.Forms.Padding(3, 27, 3, 3);
             this.panelmainBtnOn.Name = "panelmainBtnOn";
             this.panelmainBtnOn.Size = new System.Drawing.Size(191, 45);
             this.panelmainBtnOn.TabIndex = 0;
@@ -199,7 +200,7 @@
             this.panelNetworkCardBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelNetworkCardBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelNetworkCardBtn.ForeColor = System.Drawing.Color.White;
-            this.panelNetworkCardBtn.Location = new System.Drawing.Point(3, 54);
+            this.panelNetworkCardBtn.Location = new System.Drawing.Point(3, 78);
             this.panelNetworkCardBtn.Name = "panelNetworkCardBtn";
             this.panelNetworkCardBtn.Size = new System.Drawing.Size(191, 31);
             this.panelNetworkCardBtn.TabIndex = 1;
@@ -217,7 +218,7 @@
             this.panelBiosBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelBiosBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelBiosBtn.ForeColor = System.Drawing.Color.White;
-            this.panelBiosBtn.Location = new System.Drawing.Point(3, 91);
+            this.panelBiosBtn.Location = new System.Drawing.Point(3, 115);
             this.panelBiosBtn.Name = "panelBiosBtn";
             this.panelBiosBtn.Size = new System.Drawing.Size(191, 31);
             this.panelBiosBtn.TabIndex = 2;
@@ -235,7 +236,7 @@
             this.panelTempBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelTempBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelTempBtn.ForeColor = System.Drawing.Color.White;
-            this.panelTempBtn.Location = new System.Drawing.Point(3, 128);
+            this.panelTempBtn.Location = new System.Drawing.Point(3, 152);
             this.panelTempBtn.Name = "panelTempBtn";
             this.panelTempBtn.Size = new System.Drawing.Size(191, 31);
             this.panelTempBtn.TabIndex = 3;
@@ -253,7 +254,7 @@
             this.panelDiskBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelDiskBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelDiskBtn.ForeColor = System.Drawing.Color.White;
-            this.panelDiskBtn.Location = new System.Drawing.Point(3, 165);
+            this.panelDiskBtn.Location = new System.Drawing.Point(3, 189);
             this.panelDiskBtn.Name = "panelDiskBtn";
             this.panelDiskBtn.Size = new System.Drawing.Size(191, 31);
             this.panelDiskBtn.TabIndex = 4;
@@ -271,7 +272,7 @@
             this.panelOSBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelOSBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelOSBtn.ForeColor = System.Drawing.Color.White;
-            this.panelOSBtn.Location = new System.Drawing.Point(3, 202);
+            this.panelOSBtn.Location = new System.Drawing.Point(3, 226);
             this.panelOSBtn.Name = "panelOSBtn";
             this.panelOSBtn.Size = new System.Drawing.Size(191, 31);
             this.panelOSBtn.TabIndex = 5;
@@ -289,7 +290,7 @@
             this.panelPrintersBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelPrintersBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelPrintersBtn.ForeColor = System.Drawing.Color.White;
-            this.panelPrintersBtn.Location = new System.Drawing.Point(3, 239);
+            this.panelPrintersBtn.Location = new System.Drawing.Point(3, 263);
             this.panelPrintersBtn.Name = "panelPrintersBtn";
             this.panelPrintersBtn.Size = new System.Drawing.Size(191, 31);
             this.panelPrintersBtn.TabIndex = 6;
@@ -307,7 +308,7 @@
             this.panelGraphCardBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelGraphCardBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelGraphCardBtn.ForeColor = System.Drawing.Color.White;
-            this.panelGraphCardBtn.Location = new System.Drawing.Point(3, 276);
+            this.panelGraphCardBtn.Location = new System.Drawing.Point(3, 300);
             this.panelGraphCardBtn.Name = "panelGraphCardBtn";
             this.panelGraphCardBtn.Size = new System.Drawing.Size(191, 31);
             this.panelGraphCardBtn.TabIndex = 7;
@@ -325,7 +326,7 @@
             this.panelCPUBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelCPUBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelCPUBtn.ForeColor = System.Drawing.Color.White;
-            this.panelCPUBtn.Location = new System.Drawing.Point(3, 313);
+            this.panelCPUBtn.Location = new System.Drawing.Point(3, 337);
             this.panelCPUBtn.Name = "panelCPUBtn";
             this.panelCPUBtn.Size = new System.Drawing.Size(191, 31);
             this.panelCPUBtn.TabIndex = 8;
@@ -343,7 +344,7 @@
             this.panelSoundCardBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelSoundCardBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelSoundCardBtn.ForeColor = System.Drawing.Color.White;
-            this.panelSoundCardBtn.Location = new System.Drawing.Point(3, 350);
+            this.panelSoundCardBtn.Location = new System.Drawing.Point(3, 374);
             this.panelSoundCardBtn.Name = "panelSoundCardBtn";
             this.panelSoundCardBtn.Size = new System.Drawing.Size(191, 31);
             this.panelSoundCardBtn.TabIndex = 9;
@@ -361,7 +362,7 @@
             this.panelSettingsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelSettingsBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelSettingsBtn.ForeColor = System.Drawing.Color.White;
-            this.panelSettingsBtn.Location = new System.Drawing.Point(3, 387);
+            this.panelSettingsBtn.Location = new System.Drawing.Point(3, 411);
             this.panelSettingsBtn.Name = "panelSettingsBtn";
             this.panelSettingsBtn.Size = new System.Drawing.Size(191, 31);
             this.panelSettingsBtn.TabIndex = 10;
