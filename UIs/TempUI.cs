@@ -19,7 +19,8 @@ namespace PCInfos.UIs
             cpuCelsius = new CpuTemperatureReader();
 
             timer1.Start();
-            Thread thread4 = new Thread(delegate () {
+            Thread thread4 = new Thread(delegate ()
+            {
                 Invoke((EventHandler)(delegate
                 {
                     GetCpuTemperatures();
@@ -27,12 +28,20 @@ namespace PCInfos.UIs
             });
             thread4.Start();
         }
+
         private void GetCpuTemperatures()
         {
+            bool isDarkTheme = Theme.IsDarkTheme();
+            Theme theme = new Theme(isDarkTheme);
+
             // Включаем сетку для списка, устанавливаем вид списка на "Детали" и разрешаем прокручивание
             tempList.GridLines = true;
             tempList.View = View.Details;
             tempList.Scrollable = true;
+
+            // Устанавливаем цвета для темной темы
+            tempList.BackColor = theme.getBackColor();
+            tempList.ForeColor = theme.getForeColor();
 
             // Добавляем столбцы для отображения названия датчика, его значения, минимального и максимального значений
             tempList.Columns.Add("Название", -2, HorizontalAlignment.Left);
@@ -67,7 +76,6 @@ namespace PCInfos.UIs
             tempList.EndUpdate();
         }
 
-
         public void UpdateCPUTemperatures()
         {
             // Получаем температуры ЦПУ
@@ -86,10 +94,10 @@ namespace PCInfos.UIs
                 {
                     tempList.Items[i].ForeColor = Color.Red;
                 }
-                // В остальных случаях меняем цвет текста на черный
+                // В остальных случаях меняем цвет текста в соответствии с темой
                 else
                 {
-                    tempList.Items[i].ForeColor = Color.Black;
+                    tempList.Items[i].ForeColor = tempList.ForeColor;
                 }
 
                 // Обновляем значения температур в списке
@@ -100,7 +108,6 @@ namespace PCInfos.UIs
                 i++;
             }
         }
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {

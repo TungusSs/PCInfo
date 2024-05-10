@@ -41,7 +41,7 @@
             this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(15, 40);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(552, 234);
+            this.groupBox1.Size = new System.Drawing.Size(552, 224);
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Список принтеров";
@@ -70,9 +70,9 @@
             // 
             this.printerList.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.printerList.HideSelection = false;
-            this.printerList.Location = new System.Drawing.Point(15, 280);
+            this.printerList.Location = new System.Drawing.Point(15, 270);
             this.printerList.Name = "printerList";
-            this.printerList.Size = new System.Drawing.Size(552, 134);
+            this.printerList.Size = new System.Drawing.Size(552, 183);
             this.printerList.TabIndex = 25;
             this.printerList.UseCompatibleStateImageBehavior = false;
             // 
@@ -84,7 +84,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "PrintersUI";
-            this.Size = new System.Drawing.Size(594, 428);
+            this.Size = new System.Drawing.Size(594, 471);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
