@@ -96,6 +96,7 @@ namespace PCInfos.UIs
         private void button1_Click(object sender, EventArgs e)
         {
             netList.Items.Clear();
+            netList.Clear();
             GetNetWorkInfo();
         }
     }
