@@ -21,9 +21,9 @@ public class Theme
         }
         else
         {
-            BackgroundColor = Color.White;
-            PanelColor = Color.FromArgb(143, 143, 144);
-            Header = Color.FromArgb(85, 85, 86);
+            BackgroundColor = Color.FromArgb(192, 192, 196);
+            PanelColor = Color.FromArgb(223, 223, 225);
+            Header = Color.FromArgb(223, 223, 225);
             ForegroundColor = Color.Black;
         }
     }
