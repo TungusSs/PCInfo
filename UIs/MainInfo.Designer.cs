@@ -81,7 +81,7 @@
             this.groupBox2.Size = new System.Drawing.Size(552, 81);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Тип системы";
+            this.groupBox2.Text = "Модель устройства";
             // 
             // label2
             // 
@@ -102,7 +102,7 @@
             this.groupBox3.Size = new System.Drawing.Size(552, 81);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Первичная проверка памяти";
+            this.groupBox3.Text = "Свободная оперативная память";
             // 
             // label3
             // 
