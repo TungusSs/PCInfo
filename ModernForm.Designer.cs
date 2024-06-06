@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModernForm));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.user = new System.Windows.Forms.ToolStripStatusLabel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
@@ -51,6 +52,7 @@
             this.panelCPUBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panelSoundCardBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panelSettingsBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.NameSloganLabel = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.panelLeft.SuspendLayout();
@@ -82,6 +84,7 @@
             // 
             // headerPanel
             // 
+            this.headerPanel.Controls.Add(this.NameSloganLabel);
             this.headerPanel.Controls.Add(this.guna2ControlBox2);
             this.headerPanel.Controls.Add(this.guna2ControlBox1);
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -369,6 +372,16 @@
             this.panelSettingsBtn.Text = "Настройки";
             this.panelSettingsBtn.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
+            // NameSloganLabel
+            // 
+            this.NameSloganLabel.AutoSize = true;
+            this.NameSloganLabel.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameSloganLabel.Location = new System.Drawing.Point(4, 3);
+            this.NameSloganLabel.Name = "NameSloganLabel";
+            this.NameSloganLabel.Size = new System.Drawing.Size(397, 25);
+            this.NameSloganLabel.TabIndex = 6;
+            this.NameSloganLabel.Text = "PCInfo - True definition of quality";
+            // 
             // ModernForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -382,11 +395,13 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.headerPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ModernForm";
             this.Text = "ModernForm";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.headerPanel.ResumeLayout(false);
+            this.headerPanel.PerformLayout();
             this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -416,5 +431,6 @@
         private Guna.UI2.WinForms.Guna2Button panelSoundCardBtn;
         private Guna.UI2.WinForms.Guna2Button panelSettingsBtn;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
+        private System.Windows.Forms.Label NameSloganLabel;
     }
 }

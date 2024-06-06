@@ -33,12 +33,17 @@
             this.modernstyyleCheck = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BIOSLabel = new System.Windows.Forms.Label();
+            this.DiskLabel = new System.Windows.Forms.Label();
+            this.TemperatureLabel = new System.Windows.Forms.Label();
+            this.NetworkCardLabel = new System.Windows.Forms.Label();
             this.MainInfoLabel = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.NetworkCardLabel = new System.Windows.Forms.Label();
-            this.TemperatureLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.BIOSLabel = new System.Windows.Forms.Label();
+            this.OSLabel = new System.Windows.Forms.Label();
+            this.PrinterLabel = new System.Windows.Forms.Label();
+            this.GPULabel = new System.Windows.Forms.Label();
+            this.CPULabel = new System.Windows.Forms.Label();
+            this.SoundCardLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -78,27 +83,50 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.SoundCardLabel);
+            this.groupBox2.Controls.Add(this.CPULabel);
+            this.groupBox2.Controls.Add(this.GPULabel);
+            this.groupBox2.Controls.Add(this.PrinterLabel);
+            this.groupBox2.Controls.Add(this.OSLabel);
             this.groupBox2.Controls.Add(this.BIOSLabel);
-            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.DiskLabel);
             this.groupBox2.Controls.Add(this.TemperatureLabel);
             this.groupBox2.Controls.Add(this.NetworkCardLabel);
             this.groupBox2.Controls.Add(this.MainInfoLabel);
             this.groupBox2.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(16, 143);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(550, 232);
+            this.groupBox2.Size = new System.Drawing.Size(550, 238);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "О программе";
             // 
-            // MainInfoLabel
+            // BIOSLabel
             // 
-            this.MainInfoLabel.AutoSize = true;
-            this.MainInfoLabel.Location = new System.Drawing.Point(18, 42);
-            this.MainInfoLabel.Name = "MainInfoLabel";
-            this.MainInfoLabel.Size = new System.Drawing.Size(216, 17);
-            this.MainInfoLabel.TabIndex = 1;
-            this.MainInfoLabel.Text = "Общая информация о системе";
+            this.BIOSLabel.AutoSize = true;
+            this.BIOSLabel.Location = new System.Drawing.Point(18, 120);
+            this.BIOSLabel.Name = "BIOSLabel";
+            this.BIOSLabel.Size = new System.Drawing.Size(248, 17);
+            this.BIOSLabel.TabIndex = 5;
+            this.BIOSLabel.Text = "Информация о BIOS и Мат. плате";
+            // 
+            // DiskLabel
+            // 
+            this.DiskLabel.AutoSize = true;
+            this.DiskLabel.Location = new System.Drawing.Point(18, 200);
+            this.DiskLabel.Name = "DiskLabel";
+            this.DiskLabel.Size = new System.Drawing.Size(48, 17);
+            this.DiskLabel.TabIndex = 4;
+            this.DiskLabel.Text = "Диски";
+            // 
+            // TemperatureLabel
+            // 
+            this.TemperatureLabel.AutoSize = true;
+            this.TemperatureLabel.Location = new System.Drawing.Point(18, 160);
+            this.TemperatureLabel.Name = "TemperatureLabel";
+            this.TemperatureLabel.Size = new System.Drawing.Size(96, 17);
+            this.TemperatureLabel.TabIndex = 3;
+            this.TemperatureLabel.Text = "Температура";
             // 
             // NetworkCardLabel
             // 
@@ -109,32 +137,59 @@
             this.NetworkCardLabel.TabIndex = 2;
             this.NetworkCardLabel.Text = "Сетевая карта";
             // 
-            // TemperatureLabel
+            // MainInfoLabel
             // 
-            this.TemperatureLabel.AutoSize = true;
-            this.TemperatureLabel.Location = new System.Drawing.Point(18, 147);
-            this.TemperatureLabel.Name = "TemperatureLabel";
-            this.TemperatureLabel.Size = new System.Drawing.Size(96, 17);
-            this.TemperatureLabel.TabIndex = 3;
-            this.TemperatureLabel.Text = "Температура";
+            this.MainInfoLabel.AutoSize = true;
+            this.MainInfoLabel.Location = new System.Drawing.Point(18, 40);
+            this.MainInfoLabel.Name = "MainInfoLabel";
+            this.MainInfoLabel.Size = new System.Drawing.Size(216, 17);
+            this.MainInfoLabel.TabIndex = 1;
+            this.MainInfoLabel.Text = "Общая информация о системе";
             // 
-            // label4
+            // OSLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(311, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(216, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Общая информация о системе";
+            this.OSLabel.AutoSize = true;
+            this.OSLabel.Location = new System.Drawing.Point(338, 40);
+            this.OSLabel.Name = "OSLabel";
+            this.OSLabel.Size = new System.Drawing.Size(168, 17);
+            this.OSLabel.TabIndex = 6;
+            this.OSLabel.Text = "Операционная система";
             // 
-            // BIOSLabel
+            // PrinterLabel
             // 
-            this.BIOSLabel.AutoSize = true;
-            this.BIOSLabel.Location = new System.Drawing.Point(18, 114);
-            this.BIOSLabel.Name = "BIOSLabel";
-            this.BIOSLabel.Size = new System.Drawing.Size(248, 17);
-            this.BIOSLabel.TabIndex = 5;
-            this.BIOSLabel.Text = "Информация о BIOS и Мат. плате";
+            this.PrinterLabel.AutoSize = true;
+            this.PrinterLabel.Location = new System.Drawing.Point(338, 80);
+            this.PrinterLabel.Name = "PrinterLabel";
+            this.PrinterLabel.Size = new System.Drawing.Size(72, 17);
+            this.PrinterLabel.TabIndex = 7;
+            this.PrinterLabel.Text = "Принтера";
+            // 
+            // GPULabel
+            // 
+            this.GPULabel.AutoSize = true;
+            this.GPULabel.Location = new System.Drawing.Point(338, 120);
+            this.GPULabel.Name = "GPULabel";
+            this.GPULabel.Size = new System.Drawing.Size(192, 17);
+            this.GPULabel.TabIndex = 8;
+            this.GPULabel.Text = "Информация о видеокарте";
+            // 
+            // CPULabel
+            // 
+            this.CPULabel.AutoSize = true;
+            this.CPULabel.Location = new System.Drawing.Point(338, 160);
+            this.CPULabel.Name = "CPULabel";
+            this.CPULabel.Size = new System.Drawing.Size(80, 17);
+            this.CPULabel.TabIndex = 9;
+            this.CPULabel.Text = "Процессор";
+            // 
+            // SoundCardLabel
+            // 
+            this.SoundCardLabel.AutoSize = true;
+            this.SoundCardLabel.Location = new System.Drawing.Point(338, 200);
+            this.SoundCardLabel.Name = "SoundCardLabel";
+            this.SoundCardLabel.Size = new System.Drawing.Size(120, 17);
+            this.SoundCardLabel.TabIndex = 10;
+            this.SoundCardLabel.Text = "Звуковая карта";
             // 
             // SettingsUI
             // 
@@ -163,8 +218,13 @@
         private System.Windows.Forms.Label MainInfoLabel;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label BIOSLabel;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label DiskLabel;
         private System.Windows.Forms.Label TemperatureLabel;
         private System.Windows.Forms.Label NetworkCardLabel;
+        private System.Windows.Forms.Label CPULabel;
+        private System.Windows.Forms.Label GPULabel;
+        private System.Windows.Forms.Label PrinterLabel;
+        private System.Windows.Forms.Label OSLabel;
+        private System.Windows.Forms.Label SoundCardLabel;
     }
 }
