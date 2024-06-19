@@ -34,6 +34,7 @@
             this.user = new System.Windows.Forms.ToolStripStatusLabel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.headerPanel = new System.Windows.Forms.Panel();
+            this.NameSloganLabel = new System.Windows.Forms.Label();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -52,9 +53,10 @@
             this.panelCPUBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panelSoundCardBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panelSettingsBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.NameSloganLabel = new System.Windows.Forms.Label();
+            this.welcomeUI1 = new PCInfos.WelcomeUI();
             this.statusStrip1.SuspendLayout();
             this.headerPanel.SuspendLayout();
+            this.renderP.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             this.statusStrip1.Location = new System.Drawing.Point(0, 583);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(795, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(951, 22);
             this.statusStrip1.SizingGrip = false;
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
@@ -90,8 +92,18 @@
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(795, 29);
+            this.headerPanel.Size = new System.Drawing.Size(951, 29);
             this.headerPanel.TabIndex = 3;
+            // 
+            // NameSloganLabel
+            // 
+            this.NameSloganLabel.AutoSize = true;
+            this.NameSloganLabel.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameSloganLabel.Location = new System.Drawing.Point(4, 3);
+            this.NameSloganLabel.Name = "NameSloganLabel";
+            this.NameSloganLabel.Size = new System.Drawing.Size(397, 25);
+            this.NameSloganLabel.TabIndex = 6;
+            this.NameSloganLabel.Text = "PCInfo - True definition of quality";
             // 
             // guna2ControlBox2
             // 
@@ -99,7 +111,7 @@
             this.guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox2.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox2.Location = new System.Drawing.Point(699, 0);
+            this.guna2ControlBox2.Location = new System.Drawing.Point(855, 0);
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox2.TabIndex = 5;
@@ -109,7 +121,7 @@
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(152)))), ((int)(((byte)(166)))));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(750, 0);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(906, 0);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(45, 29);
             this.guna2ControlBox1.TabIndex = 4;
@@ -124,7 +136,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(655, 585);
+            this.label1.Location = new System.Drawing.Point(790, 585);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 7;
@@ -136,7 +148,7 @@
             this.swithTheme.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.swithTheme.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.swithTheme.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.swithTheme.Location = new System.Drawing.Point(748, 586);
+            this.swithTheme.Location = new System.Drawing.Point(883, 586);
             this.swithTheme.Name = "swithTheme";
             this.swithTheme.Size = new System.Drawing.Size(35, 18);
             this.swithTheme.TabIndex = 6;
@@ -148,10 +160,11 @@
             // 
             // renderP
             // 
+            this.renderP.Controls.Add(this.welcomeUI1);
             this.renderP.Dock = System.Windows.Forms.DockStyle.Fill;
             this.renderP.Location = new System.Drawing.Point(197, 29);
             this.renderP.Name = "renderP";
-            this.renderP.Size = new System.Drawing.Size(598, 554);
+            this.renderP.Size = new System.Drawing.Size(754, 554);
             this.renderP.TabIndex = 4;
             // 
             // panelLeft
@@ -372,22 +385,19 @@
             this.panelSettingsBtn.Text = "Настройки";
             this.panelSettingsBtn.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
-            // NameSloganLabel
+            // welcomeUI1
             // 
-            this.NameSloganLabel.AutoSize = true;
-            this.NameSloganLabel.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.NameSloganLabel.Location = new System.Drawing.Point(4, 3);
-            this.NameSloganLabel.Name = "NameSloganLabel";
-            this.NameSloganLabel.Size = new System.Drawing.Size(397, 25);
-            this.NameSloganLabel.TabIndex = 6;
-            this.NameSloganLabel.Text = "PCInfo - True definition of quality";
+            this.welcomeUI1.Location = new System.Drawing.Point(3, 3);
+            this.welcomeUI1.Name = "welcomeUI1";
+            this.welcomeUI1.Size = new System.Drawing.Size(751, 548);
+            this.welcomeUI1.TabIndex = 0;
             // 
             // ModernForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(795, 605);
+            this.ClientSize = new System.Drawing.Size(951, 605);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.renderP);
             this.Controls.Add(this.swithTheme);
@@ -402,6 +412,7 @@
             this.statusStrip1.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            this.renderP.ResumeLayout(false);
             this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -432,5 +443,6 @@
         private Guna.UI2.WinForms.Guna2Button panelSettingsBtn;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private System.Windows.Forms.Label NameSloganLabel;
+        private WelcomeUI welcomeUI1;
     }
 }

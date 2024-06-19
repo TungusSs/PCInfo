@@ -187,6 +187,12 @@
     <Compile Include="UIs\VideocardUI.Designer.cs">
       <DependentUpon>VideocardUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\WelcomeUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\WelcomeUI.Designer.cs">
+      <DependentUpon>WelcomeUI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UIs\VideocardUI.resx">
       <DependentUpon>VideocardUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UIs\WelcomeUI.resx">
+      <DependentUpon>WelcomeUI.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
