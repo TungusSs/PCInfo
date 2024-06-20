@@ -44,18 +44,19 @@
             this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(20, 55);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(552, 349);
+            this.groupBox1.Size = new System.Drawing.Size(654, 349);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Таблица состояния температуры";
             // 
             // tempList
             // 
+            this.tempList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tempList.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tempList.HideSelection = false;
-            this.tempList.Location = new System.Drawing.Point(6, 55);
+            this.tempList.Location = new System.Drawing.Point(3, 21);
             this.tempList.Name = "tempList";
-            this.tempList.Size = new System.Drawing.Size(540, 288);
+            this.tempList.Size = new System.Drawing.Size(648, 325);
             this.tempList.TabIndex = 15;
             this.tempList.UseCompatibleStateImageBehavior = false;
             // 
@@ -91,7 +92,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "TempUI";
-            this.Size = new System.Drawing.Size(594, 428);
+            this.Size = new System.Drawing.Size(700, 428);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

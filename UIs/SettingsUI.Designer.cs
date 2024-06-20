@@ -33,17 +33,17 @@
             this.modernstyyleCheck = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.SoundCardLabel = new System.Windows.Forms.Label();
+            this.CPULabel = new System.Windows.Forms.Label();
+            this.GPULabel = new System.Windows.Forms.Label();
+            this.PrinterLabel = new System.Windows.Forms.Label();
+            this.OSLabel = new System.Windows.Forms.Label();
             this.BIOSLabel = new System.Windows.Forms.Label();
             this.DiskLabel = new System.Windows.Forms.Label();
             this.TemperatureLabel = new System.Windows.Forms.Label();
             this.NetworkCardLabel = new System.Windows.Forms.Label();
             this.MainInfoLabel = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.OSLabel = new System.Windows.Forms.Label();
-            this.PrinterLabel = new System.Windows.Forms.Label();
-            this.GPULabel = new System.Windows.Forms.Label();
-            this.CPULabel = new System.Windows.Forms.Label();
-            this.SoundCardLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -52,9 +52,9 @@
             // 
             this.groupBox1.Controls.Add(this.modernstyyleCheck);
             this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 55);
+            this.groupBox1.Location = new System.Drawing.Point(93, 56);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(550, 82);
+            this.groupBox1.Size = new System.Drawing.Size(537, 82);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Настройки отображения";
@@ -94,12 +94,57 @@
             this.groupBox2.Controls.Add(this.NetworkCardLabel);
             this.groupBox2.Controls.Add(this.MainInfoLabel);
             this.groupBox2.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(16, 143);
+            this.groupBox2.Location = new System.Drawing.Point(93, 165);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(550, 238);
+            this.groupBox2.Size = new System.Drawing.Size(537, 238);
             this.groupBox2.TabIndex = 32;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "О программе";
+            // 
+            // SoundCardLabel
+            // 
+            this.SoundCardLabel.AutoSize = true;
+            this.SoundCardLabel.Location = new System.Drawing.Point(338, 200);
+            this.SoundCardLabel.Name = "SoundCardLabel";
+            this.SoundCardLabel.Size = new System.Drawing.Size(120, 17);
+            this.SoundCardLabel.TabIndex = 10;
+            this.SoundCardLabel.Text = "Звуковая карта";
+            // 
+            // CPULabel
+            // 
+            this.CPULabel.AutoSize = true;
+            this.CPULabel.Location = new System.Drawing.Point(338, 160);
+            this.CPULabel.Name = "CPULabel";
+            this.CPULabel.Size = new System.Drawing.Size(80, 17);
+            this.CPULabel.TabIndex = 9;
+            this.CPULabel.Text = "Процессор";
+            // 
+            // GPULabel
+            // 
+            this.GPULabel.AutoSize = true;
+            this.GPULabel.Location = new System.Drawing.Point(338, 120);
+            this.GPULabel.Name = "GPULabel";
+            this.GPULabel.Size = new System.Drawing.Size(192, 17);
+            this.GPULabel.TabIndex = 8;
+            this.GPULabel.Text = "Информация о видеокарте";
+            // 
+            // PrinterLabel
+            // 
+            this.PrinterLabel.AutoSize = true;
+            this.PrinterLabel.Location = new System.Drawing.Point(338, 80);
+            this.PrinterLabel.Name = "PrinterLabel";
+            this.PrinterLabel.Size = new System.Drawing.Size(72, 17);
+            this.PrinterLabel.TabIndex = 7;
+            this.PrinterLabel.Text = "Принтера";
+            // 
+            // OSLabel
+            // 
+            this.OSLabel.AutoSize = true;
+            this.OSLabel.Location = new System.Drawing.Point(338, 40);
+            this.OSLabel.Name = "OSLabel";
+            this.OSLabel.Size = new System.Drawing.Size(168, 17);
+            this.OSLabel.TabIndex = 6;
+            this.OSLabel.Text = "Операционная система";
             // 
             // BIOSLabel
             // 
@@ -146,51 +191,6 @@
             this.MainInfoLabel.TabIndex = 1;
             this.MainInfoLabel.Text = "Общая информация о системе";
             // 
-            // OSLabel
-            // 
-            this.OSLabel.AutoSize = true;
-            this.OSLabel.Location = new System.Drawing.Point(338, 40);
-            this.OSLabel.Name = "OSLabel";
-            this.OSLabel.Size = new System.Drawing.Size(168, 17);
-            this.OSLabel.TabIndex = 6;
-            this.OSLabel.Text = "Операционная система";
-            // 
-            // PrinterLabel
-            // 
-            this.PrinterLabel.AutoSize = true;
-            this.PrinterLabel.Location = new System.Drawing.Point(338, 80);
-            this.PrinterLabel.Name = "PrinterLabel";
-            this.PrinterLabel.Size = new System.Drawing.Size(72, 17);
-            this.PrinterLabel.TabIndex = 7;
-            this.PrinterLabel.Text = "Принтера";
-            // 
-            // GPULabel
-            // 
-            this.GPULabel.AutoSize = true;
-            this.GPULabel.Location = new System.Drawing.Point(338, 120);
-            this.GPULabel.Name = "GPULabel";
-            this.GPULabel.Size = new System.Drawing.Size(192, 17);
-            this.GPULabel.TabIndex = 8;
-            this.GPULabel.Text = "Информация о видеокарте";
-            // 
-            // CPULabel
-            // 
-            this.CPULabel.AutoSize = true;
-            this.CPULabel.Location = new System.Drawing.Point(338, 160);
-            this.CPULabel.Name = "CPULabel";
-            this.CPULabel.Size = new System.Drawing.Size(80, 17);
-            this.CPULabel.TabIndex = 9;
-            this.CPULabel.Text = "Процессор";
-            // 
-            // SoundCardLabel
-            // 
-            this.SoundCardLabel.AutoSize = true;
-            this.SoundCardLabel.Location = new System.Drawing.Point(338, 200);
-            this.SoundCardLabel.Name = "SoundCardLabel";
-            this.SoundCardLabel.Size = new System.Drawing.Size(120, 17);
-            this.SoundCardLabel.TabIndex = 10;
-            this.SoundCardLabel.Text = "Звуковая карта";
-            // 
             // SettingsUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,7 +199,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "SettingsUI";
-            this.Size = new System.Drawing.Size(594, 443);
+            this.Size = new System.Drawing.Size(700, 443);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

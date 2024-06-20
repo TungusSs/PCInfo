@@ -55,7 +55,7 @@
             // 
             this.groupBox1.Controls.Add(this.maininfolabel);
             this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(17, 58);
+            this.groupBox1.Location = new System.Drawing.Point(83, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(552, 135);
             this.groupBox1.TabIndex = 1;
@@ -75,7 +75,7 @@
             // 
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox2.Location = new System.Drawing.Point(17, 211);
+            this.groupBox2.Location = new System.Drawing.Point(83, 211);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(552, 81);
             this.groupBox2.TabIndex = 2;
@@ -96,7 +96,7 @@
             // 
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox3.Location = new System.Drawing.Point(17, 307);
+            this.groupBox3.Location = new System.Drawing.Point(83, 307);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(552, 81);
             this.groupBox3.TabIndex = 3;
@@ -125,7 +125,7 @@
             this.saveBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.saveBtn.Image = global::PCInfos.Properties.Resources.download;
             this.saveBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.saveBtn.Location = new System.Drawing.Point(389, 24);
+            this.saveBtn.Location = new System.Drawing.Point(492, 24);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(180, 28);
             this.saveBtn.TabIndex = 5;
@@ -142,7 +142,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "MainInfo";
-            this.Size = new System.Drawing.Size(594, 428);
+            this.Size = new System.Drawing.Size(700, 428);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();

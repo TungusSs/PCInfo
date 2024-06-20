@@ -45,16 +45,16 @@
             this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(17, 58);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(552, 349);
+            this.groupBox1.Size = new System.Drawing.Size(663, 349);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Таблица отображения сети";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(458, 296);
+            this.button1.Location = new System.Drawing.Point(528, 296);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 34);
+            this.button1.Size = new System.Drawing.Size(129, 34);
             this.button1.TabIndex = 16;
             this.button1.Text = "Обновить";
             this.button1.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             this.netList.HideSelection = false;
             this.netList.Location = new System.Drawing.Point(6, 24);
             this.netList.Name = "netList";
-            this.netList.Size = new System.Drawing.Size(540, 266);
+            this.netList.Size = new System.Drawing.Size(651, 266);
             this.netList.TabIndex = 15;
             this.netList.UseCompatibleStateImageBehavior = false;
             // 
@@ -99,7 +99,7 @@
             this.progress.MaximumValue = 100;
             this.progress.Name = "progress";
             this.progress.ProgressColor = System.Drawing.Color.Teal;
-            this.progress.Size = new System.Drawing.Size(552, 13);
+            this.progress.Size = new System.Drawing.Size(663, 13);
             this.progress.TabIndex = 6;
             this.progress.Value = 0;
             // 
@@ -111,7 +111,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Ethernet";
-            this.Size = new System.Drawing.Size(594, 428);
+            this.Size = new System.Drawing.Size(700, 428);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

@@ -39,7 +39,7 @@
             // 
             this.groupBox1.Controls.Add(this.maininfolabel);
             this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.groupBox1.Location = new System.Drawing.Point(23, 36);
+            this.groupBox1.Location = new System.Drawing.Point(77, 31);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(552, 310);
             this.groupBox1.TabIndex = 19;
@@ -70,7 +70,7 @@
             // 
             this.diskList.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.diskList.HideSelection = false;
-            this.diskList.Location = new System.Drawing.Point(23, 352);
+            this.diskList.Location = new System.Drawing.Point(77, 347);
             this.diskList.Name = "diskList";
             this.diskList.Size = new System.Drawing.Size(552, 86);
             this.diskList.TabIndex = 20;
@@ -84,7 +84,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "DiskUI";
-            this.Size = new System.Drawing.Size(594, 456);
+            this.Size = new System.Drawing.Size(700, 456);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
