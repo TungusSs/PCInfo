@@ -24,13 +24,12 @@ namespace PCInfos.UIs
         {
             // Инициализация переменных
             string result = "";
-            string osVersion = "";
+            string osVersion = GetOSVersion();
             // Создание объекта для поиска информации об операционной системе
             ManagementObjectSearcher myOperativeSystemObject = new ManagementObjectSearcher("select * from Win32_OperatingSystem");
             // Получение информации об операционной системе и формирование строки с результатом
             foreach (ManagementObject obj in myOperativeSystemObject.Get())
             {
-                osVersion = obj["Version"].ToString();
                 result += "Название  -  " + obj["Caption"] + "\n";
                 result += "Каталог Windows  -  " + obj["WindowsDirectory"] + "\n";
                 result += "Тип продукта  -  " + obj["ProductType"] + "\n";
@@ -44,22 +43,44 @@ namespace PCInfos.UIs
             }
 
             // Установка изображения операционной системы в зависимости от версии
-            if (osVersion.StartsWith("6.1") || osVersion.StartsWith("6.0"))
-            {
-                pictureBox1.Image = Properties.Resources.Win7;
-            }
-            else if (osVersion == "10.0.22000" || osVersion.StartsWith("11"))
-            {
-                pictureBox1.Image = Properties.Resources.Win11;
-            }
-            else if (osVersion.StartsWith("10.0"))
-            {
-                pictureBox1.Image = Properties.Resources.Win10;
-            }
+            SetOSImage(osVersion);
 
             // Возврат строки с информацией об операционной системе
             return result;
+        }
 
+        // Функция для получения версии операционной системы
+        string GetOSVersion()
+        {
+            string osVersion = "";
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher("select Version from Win32_OperatingSystem");
+            foreach (ManagementObject obj in searcher.Get())
+            {
+                osVersion = obj["Version"].ToString();
+            }
+            return osVersion;
+        }
+
+        // Функция для установки изображения операционной системы в зависимости от версии
+        void SetOSImage(string version)
+        {
+            Version currentVersion = new Version(version);
+
+            if (currentVersion.Major == 10)
+            {
+                if (currentVersion >= new Version("10.0.22000.0"))
+                {
+                    pictureBox1.Image = Properties.Resources.Win11;
+                }
+                else
+                {
+                    pictureBox1.Image = Properties.Resources.Win10;
+                }
+            }
+            else if (currentVersion.Major == 6 && (currentVersion.Minor == 0 || currentVersion.Minor == 1))
+            {
+                pictureBox1.Image = Properties.Resources.Win7;
+            }
         }
     }
 }
