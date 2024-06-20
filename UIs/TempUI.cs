@@ -19,7 +19,8 @@ namespace PCInfos.UIs
             cpuCelsius = new CpuTemperatureReader();
 
             timer1.Start();
-            Thread thread4 = new Thread(delegate () {
+            Thread thread4 = new Thread(delegate ()
+            {
                 Invoke((EventHandler)(delegate
                 {
                     GetCpuTemperatures();
@@ -27,12 +28,20 @@ namespace PCInfos.UIs
             });
             thread4.Start();
         }
+
         private void GetCpuTemperatures()
         {
+            bool isDarkTheme = Theme.IsDarkTheme();
+            Theme theme = new Theme(isDarkTheme);
+
             // Включаем сетку для списка, устанавливаем вид списка на "Детали" и разрешаем прокручивание
             tempList.GridLines = true;
             tempList.View = View.Details;
             tempList.Scrollable = true;
+
+            // Устанавливаем цвета для темной темы
+            tempList.BackColor = theme.getBackColor();
+            tempList.ForeColor = theme.getForeColor();
 
             // Добавляем столбцы для отображения названия датчика, его значения, минимального и максимального значений
             tempList.Columns.Add("Название", -2, HorizontalAlignment.Left);
@@ -57,16 +66,15 @@ namespace PCInfos.UIs
                 {
                     Text = temperatures.name
                 };
-                cpu_item.SubItems.Add(temperatures.value + " °C");
-                cpu_item.SubItems.Add(temperatures.minvalue + " °C");
-                cpu_item.SubItems.Add(temperatures.maxvalue + " °C");
+                cpu_item.SubItems.Add($"{temperatures.value:F1} °C");
+                cpu_item.SubItems.Add($"{temperatures.minvalue:F1} °C");
+                cpu_item.SubItems.Add($"{temperatures.maxvalue:F1} °C");
                 tempList.Items.Add(cpu_item);
             }
 
             // Завершаем обновление списка
             tempList.EndUpdate();
         }
-
 
         public void UpdateCPUTemperatures()
         {
@@ -86,21 +94,20 @@ namespace PCInfos.UIs
                 {
                     tempList.Items[i].ForeColor = Color.Red;
                 }
-                // В остальных случаях меняем цвет текста на черный
+                // В остальных случаях меняем цвет текста в соответствии с темой
                 else
                 {
-                    tempList.Items[i].ForeColor = Color.Black;
+                    tempList.Items[i].ForeColor = tempList.ForeColor;
                 }
 
                 // Обновляем значения температур в списке
-                tempList.Items[i].SubItems[1].Text = temperatures.value + " °C";
-                tempList.Items[i].SubItems[2].Text = temperatures.minvalue + " °C";
-                tempList.Items[i].SubItems[3].Text = temperatures.maxvalue + " °C";
+                tempList.Items[i].SubItems[1].Text = $"{temperatures.value:F1} °C";
+                tempList.Items[i].SubItems[2].Text = $"{temperatures.minvalue:F1} °C";
+                tempList.Items[i].SubItems[3].Text = $"{temperatures.maxvalue:F1} °C";
 
                 i++;
             }
         }
-
 
         private void timer1_Tick(object sender, EventArgs e)
         {

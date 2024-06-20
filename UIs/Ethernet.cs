@@ -15,6 +15,11 @@ namespace PCInfos.UIs
         //Функция получения информации о сети.
         private void GetNetWorkInfo()
         {
+            bool isDarkTheme = Theme.IsDarkTheme();
+            Theme theme = new Theme(isDarkTheme);
+
+            netList.BackColor = theme.getBackColor();
+            netList.ForeColor = theme.getForeColor();
             progress.Value = 5; // Установка начального значения прогресс-бара.
             netList.GridLines = true; // Отображение сетки в ListView.
             netList.View = View.Details; // Установка отображения ListView в виде таблицы.
@@ -91,6 +96,7 @@ namespace PCInfos.UIs
         private void button1_Click(object sender, EventArgs e)
         {
             netList.Items.Clear();
+            netList.Clear();
             GetNetWorkInfo();
         }
     }

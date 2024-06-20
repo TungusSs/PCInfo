@@ -11,9 +11,12 @@ namespace PCInfos.UIs
         {
             InitializeComponent();
 
-            Thread thread2 = new Thread(delegate () {
+            Thread thread2 = new Thread(delegate ()
+            {
                 Invoke((EventHandler)(delegate
                 {
+                    // Установка шрифта, размера и стиля для маркера
+                    maininfolabel.Font = new System.Drawing.Font("JetBrains Mono", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
                     maininfolabel.Text = getData();
                     GetPrinterInfo();
                 }));

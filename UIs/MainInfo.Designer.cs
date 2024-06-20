@@ -35,7 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.saveButton = new System.Windows.Forms.Button();
+            this.saveBtn = new Guna.UI2.WinForms.Guna2Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -44,17 +44,17 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(13, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(227, 20);
+            this.label1.Size = new System.Drawing.Size(243, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Общая информация о системе";
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.maininfolabel);
-            this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(17, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(552, 135);
@@ -75,13 +75,13 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(17, 211);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(552, 81);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Тип системы";
+            this.groupBox2.Text = "Модель устройства";
             // 
             // label2
             // 
@@ -96,13 +96,13 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label3);
-            this.groupBox3.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox3.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox3.Location = new System.Drawing.Point(17, 307);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(552, 81);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Первичная проверка памяти";
+            this.groupBox3.Text = "Свободная оперативная память";
             // 
             // label3
             // 
@@ -114,24 +114,30 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "\r\n";
             // 
-            // saveButton
+            // saveBtn
             // 
-            this.saveButton.Image = global::PCInfos.Properties.Resources.download1;
-            this.saveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveButton.Location = new System.Drawing.Point(437, 17);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(132, 35);
-            this.saveButton.TabIndex = 4;
-            this.saveButton.Text = "Сохранить в файл";
-            this.saveButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.saveButton.UseVisualStyleBackColor = true;
-            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            this.saveBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.saveBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.saveBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.saveBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.saveBtn.FillColor = System.Drawing.Color.Transparent;
+            this.saveBtn.Font = new System.Drawing.Font("JetBrains Mono", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.saveBtn.ForeColor = System.Drawing.Color.Black;
+            this.saveBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.saveBtn.Image = global::PCInfos.Properties.Resources.download;
+            this.saveBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.saveBtn.Location = new System.Drawing.Point(389, 24);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(180, 28);
+            this.saveBtn.TabIndex = 5;
+            this.saveBtn.Text = "Сохранить в файл";
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // MainInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.saveButton);
+            this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -158,6 +164,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button saveButton;
+        private Guna.UI2.WinForms.Guna2Button saveBtn;
     }
 }

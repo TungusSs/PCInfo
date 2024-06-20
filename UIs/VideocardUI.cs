@@ -30,7 +30,8 @@ namespace PCInfos.UIs
 
             // Получаем количество найденных видеокарт
             //int videoCount = myVideoObject.Get().Count;
-
+            bool isDarkTheme = Theme.IsDarkTheme();
+            Theme theme = new Theme(isDarkTheme);
             // Начинаем добавлять закладки для каждой найденной видеокарты
             int tabPageIndex = 1;
             foreach (ManagementObject obj in myVideoObject.Get())
@@ -53,7 +54,8 @@ namespace PCInfos.UIs
                 TabPage tabPage = new TabPage();
                 tabPage.Name = "tabPage" + tabPageIndex;
                 tabPage.Text = videoName;
-
+                tabPage.BackColor = theme.getBackColor();
+                tabPage.ForeColor = theme.getForeColor();
                 // Создаем метку для отображения информации о видеокарте на вкладке
                 Label label = new Label();
                 label.AutoSize = true;

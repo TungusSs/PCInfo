@@ -41,7 +41,7 @@
             // 
             this.groupBox1.Controls.Add(this.tempList);
             this.groupBox1.Controls.Add(this.maininfolabel);
-            this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(20, 55);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(552, 349);
@@ -51,6 +51,7 @@
             // 
             // tempList
             // 
+            this.tempList.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.tempList.HideSelection = false;
             this.tempList.Location = new System.Drawing.Point(6, 55);
             this.tempList.Name = "tempList";
@@ -71,10 +72,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(16, 21);
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(16, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(299, 20);
+            this.label1.Size = new System.Drawing.Size(324, 19);
             this.label1.TabIndex = 7;
             this.label1.Text = "Информация о температуре процессора\r\n";
             // 

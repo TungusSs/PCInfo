@@ -31,9 +31,8 @@ namespace PCInfos.UIs
             }, TaskScheduler.FromCurrentSynchronizationContext());
         }
 
-        private void saveButton_Click(object sender, System.EventArgs e)
+        private void saveBtn_Click(object sender, EventArgs e)
         {
-            // Получение всей информации и форматирование в одну строку
             string systemInfo = CollectSystemInfo.GetOperatingSystemInfo() + "\n" +
                                 CollectSystemInfo.GetUserNameAndPcName() + "\n" +
                                 CollectSystemInfo.GetProcessorInfo() + "\n" +
@@ -43,12 +42,10 @@ namespace PCInfos.UIs
                                 CollectSystemInfo.GetStorageInfo() + "\n" +
                                 CollectSystemInfo.GetOpticalDriveInfo();
 
-            // Задание пути к файлу для сохранения
             string filePath = "SystemInfo.txt";
 
             try
             {
-                // Запись информации в файл
                 File.WriteAllText(filePath, systemInfo);
                 MessageBox.Show("Информация успешно сохранена в файле: " + filePath, "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

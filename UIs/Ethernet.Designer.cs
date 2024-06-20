@@ -42,7 +42,7 @@
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.netList);
             this.groupBox1.Controls.Add(this.maininfolabel);
-            this.groupBox1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(17, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(552, 349);
@@ -62,6 +62,8 @@
             // 
             // netList
             // 
+            this.netList.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.netList.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.netList.HideSelection = false;
             this.netList.Location = new System.Drawing.Point(6, 24);
             this.netList.Name = "netList";
@@ -82,10 +84,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(13, 24);
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Location = new System.Drawing.Point(14, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(382, 20);
+            this.label1.Size = new System.Drawing.Size(414, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Информация об интерфейсе сетевого подключения";
             // 

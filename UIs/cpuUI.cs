@@ -10,13 +10,16 @@ namespace PCInfos.UIs
         public cpuUI()
         {
             InitializeComponent();
-            Thread th = new Thread(delegate () {
+            Thread th = new Thread(delegate ()
+            {
                 Invoke((EventHandler)(delegate
                 {
-                    maininfolabel.Text = GetProcessorInfo(); 
+                    // Устанавливаем размер и шрифт для маркера
+                    maininfolabel.Font = new System.Drawing.Font("JetBrains Mono", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
+                    maininfolabel.Text = GetProcessorInfo();
                 }));
             });
-            th.Start(); 
+            th.Start();
             // Этот код запускает новый поток с использованием лямбда-выражения для выполнения асинхронной операции получения информации о процессоре с помощью метода GetProcessorInfo().
             // Затем, используя метод Invoke, результат этого метода передается обратно в главный поток выполнения программы, где он обновляет текстовую метку maininfolabel с информацией о процессоре.
             // Таким образом, приложение продолжает работать и не блокируется во время выполнения операции получения информации.

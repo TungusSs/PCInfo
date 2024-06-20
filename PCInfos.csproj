@@ -13,6 +13,7 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,7 +26,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -51,6 +51,15 @@
   <PropertyGroup>
     <ApplicationIcon>favicon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Tungus.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>C:\Users\Hurbatov\Downloads\Invitro\bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
@@ -65,9 +74,6 @@
       <HintPath>packages\LibreHardwareMonitorLib.0.9.3\lib\net472\LibreHardwareMonitorLib.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="Mono.Posix.NETStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\Mono.Posix.NETStandard.1.0.0\lib\net40\Mono.Posix.NETStandard.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
     <Reference Include="System.CodeDom, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -93,6 +99,7 @@
     <Compile Include="Classes\CpuTemperatureReader.cs" />
     <Compile Include="Classes\DiskInfo.cs" />
     <Compile Include="Classes\SettingsHelper.cs" />
+    <Compile Include="Classes\UI\Theme.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +187,12 @@
     <Compile Include="UIs\VideocardUI.Designer.cs">
       <DependentUpon>VideocardUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="UIs\WelcomeUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UIs\WelcomeUI.Designer.cs">
+      <DependentUpon>WelcomeUI.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +237,9 @@
     <EmbeddedResource Include="UIs\VideocardUI.resx">
       <DependentUpon>VideocardUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UIs\WelcomeUI.resx">
+      <DependentUpon>WelcomeUI.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -234,6 +250,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Tungus.pfx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -266,6 +283,7 @@
     <None Include="bin\Debug\icons\intel.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\download_down_arrow_save_icon_145992.png" />
     <None Include="icons\download.png" />
     <None Include="bin\Debug\icons\download.png" />
     <Content Include="Bunifu_UI_v1.5.3.dll" />
