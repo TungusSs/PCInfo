@@ -64,11 +64,10 @@
             // 
             // maininfolabel
             // 
-            this.maininfolabel.AutoSize = true;
             this.maininfolabel.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.maininfolabel.Location = new System.Drawing.Point(22, 37);
             this.maininfolabel.Name = "maininfolabel";
-            this.maininfolabel.Size = new System.Drawing.Size(7, 15);
+            this.maininfolabel.Size = new System.Drawing.Size(513, 84);
             this.maininfolabel.TabIndex = 0;
             this.maininfolabel.Text = "\r\n";
             // 
@@ -145,7 +144,6 @@
             this.Name = "MainInfo";
             this.Size = new System.Drawing.Size(594, 428);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);

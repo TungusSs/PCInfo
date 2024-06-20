@@ -283,6 +283,7 @@
     <None Include="bin\Debug\icons\intel.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="logo_setup.ico" />
     <None Include="Resources\download_down_arrow_save_icon_145992.png" />
     <None Include="icons\download.png" />
     <None Include="bin\Debug\icons\download.png" />
