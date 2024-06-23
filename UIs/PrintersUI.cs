@@ -7,38 +7,48 @@ namespace PCInfos.UIs
 {
     public partial class PrintersUI : UserControl
     {
+        /// <summary>
+        /// Конструктор, инициализирующий компонент и запускающий поток для получения данных о принтерах.
+        /// </summary>
         public PrintersUI()
         {
             InitializeComponent();
 
             Thread thread2 = new Thread(delegate ()
             {
+                // Используем Invoke для безопасного обновления UI из другого потока
                 Invoke((EventHandler)(delegate
                 {
-                    // Установка шрифта, размера и стиля для маркера
+                    // Установка шрифта, размера и стиля для метки
                     maininfolabel.Font = new System.Drawing.Font("JetBrains Mono", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
                     maininfolabel.Text = getData();
+                    // Получаем информацию о принтерах и отображаем её
                     GetPrinterInfo();
                 }));
             });
-            thread2.Start(); // асинхрон, чтобы не нагружать интерфейс
+            thread2.Start(); // Асинхронный запуск, чтобы не нагружать интерфейс
         }
 
+        /// <summary>
+        /// Метод, возвращающий строку с информацией о принтерах.
+        /// </summary>
+        /// <returns>Строка с информацией о принтерах.</returns>
         string getData()
         {
-            string result = ""; // создаем пустую строку, в которую будем добавлять данные о принтерах
-            ManagementObjectSearcher myPrinterObject = new ManagementObjectSearcher("select * from Win32_Printer"); // создаем объект для получения информации о принтерах
+            string result = ""; // Создаем пустую строку, в которую будем добавлять данные о принтерах
+            ManagementObjectSearcher myPrinterObject = new ManagementObjectSearcher("select * from Win32_Printer"); // Создаем объект для получения информации о принтерах
 
-            foreach (ManagementObject obj in myPrinterObject.Get()) // перебираем все объекты, полученные из запроса к WMI
+            foreach (ManagementObject obj in myPrinterObject.Get()) // Перебираем все объекты, полученные из запроса к WMI
             {
-                string fi = obj["Default"].ToString() == "True" ? " - Основной" : ""; // определяем, является ли принтер основным, и если да, то добавляем соответствующую метку
-                result += "Название - " + obj["Name"] + fi + "\n"; // добавляем информацию о принтере в итоговую строку
+                string fi = obj["Default"].ToString() == "True" ? " - Основной" : ""; // Определяем, является ли принтер основным, и если да, то добавляем соответствующую метку
+                result += "Название - " + obj["Name"] + fi + "\n"; // Добавляем информацию о принтере в итоговую строку
             }
-            return result; // возвращаем итоговую строку с информацией о принтерах
+            return result; // Возвращаем итоговую строку с информацией о принтерах
         }
 
-
-        // Функция для получения информации о принтерах
+        /// <summary>
+        /// Метод для получения и отображения информации о принтерах.
+        /// </summary>
         private void GetPrinterInfo()
         {
             // Включение сетки на списке принтеров
@@ -83,8 +93,6 @@ namespace PCInfos.UIs
             }
             // Завершение обновления списка принтеров
             printerList.EndUpdate();
-
         }
-
     }
 }

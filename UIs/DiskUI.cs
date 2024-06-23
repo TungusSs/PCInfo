@@ -9,20 +9,29 @@ namespace PCInfos.UIs
 {
     public partial class DiskUI : UserControl
     {
+        /// <summary>
+        /// Конструктор, инициализирующий компонент и запускающий поток для получения данных о дисках.
+        /// </summary>
         public DiskUI()
         {
             InitializeComponent();
 
             Thread thread2 = new Thread(delegate () {
+                // Используем Invoke для безопасного обновления UI из другого потока
                 Invoke((EventHandler)(delegate
                 {
+                    // Устанавливаем текст главной информационной метки
                     maininfolabel.Text = getData();
+                    // Получаем информацию о дисках и отображаем её
                     GetDisks();
                 }));
             });
             thread2.Start();
         }
 
+        /// <summary>
+        /// Метод для получения и отображения информации о дисках.
+        /// </summary>
         private void GetDisks()
         {
             // Устанавливаем свойства для ListView
@@ -61,8 +70,10 @@ namespace PCInfos.UIs
             diskList.EndUpdate();
         }
 
-
-        // Метод для получения информации о дисках
+        /// <summary>
+        /// Метод для получения информации о дисках.
+        /// </summary>
+        /// <returns>Список объектов DiskInfo с информацией о дисках.</returns>
         public static ArrayList GetDiskInfo()
         {
             try
@@ -97,9 +108,11 @@ namespace PCInfos.UIs
                 return null;
             }
         }
-        // Метод, который возвращает информацию о всех дисках, подключенных к компьютеру.
-        // Использует метод GetDrives() из класса DriveInfo для получения информации о каждом диске.
-        // Возвращает строку с информацией о каждом диске, его типе, метке тома, файловой системе и объемах свободного и общего пространства на диске.
+
+        /// <summary>
+        /// Метод, который возвращает информацию о всех дисках, подключенных к компьютеру.
+        /// </summary>
+        /// <returns>Строка с информацией о дисках.</returns>
         public string getData()
         {
             string result = "";
@@ -127,11 +140,16 @@ namespace PCInfos.UIs
 
             // Возвращение строки с информацией о дисках.
             return result;
-
         }
+
         // Суффиксы размерности для использования в SizeSuffix
         static readonly string[] SizeSuffixes = { "bytes", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB" };
-        // Функция конвертации числа в строку с добавлением соответствующего суффикса размерности
+
+        /// <summary>
+        /// Метод для конвертации числа в строку с добавлением соответствующего суффикса размерности.
+        /// </summary>
+        /// <param name="value">Число для конвертации.</param>
+        /// <returns>Строка с числом и суффиксом размерности.</returns>
         static string SizeSuffix(Int64 value)
         {
             if (value < 0) { return "-" + SizeSuffix(-value); }

@@ -51,7 +51,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.modernstyyleCheck);
-            this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox1.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(93, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(537, 82);
@@ -62,7 +62,7 @@
             // modernstyyleCheck
             // 
             this.modernstyyleCheck.AutoSize = true;
-            this.modernstyyleCheck.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.modernstyyleCheck.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.modernstyyleCheck.Location = new System.Drawing.Point(21, 36);
             this.modernstyyleCheck.Name = "modernstyyleCheck";
             this.modernstyyleCheck.Size = new System.Drawing.Size(195, 21);
@@ -74,7 +74,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("JetBrains Mono", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(13, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 19);
@@ -93,7 +93,7 @@
             this.groupBox2.Controls.Add(this.TemperatureLabel);
             this.groupBox2.Controls.Add(this.NetworkCardLabel);
             this.groupBox2.Controls.Add(this.MainInfoLabel);
-            this.groupBox2.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox2.Location = new System.Drawing.Point(93, 165);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(537, 238);
@@ -104,6 +104,7 @@
             // SoundCardLabel
             // 
             this.SoundCardLabel.AutoSize = true;
+            this.SoundCardLabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SoundCardLabel.Location = new System.Drawing.Point(338, 200);
             this.SoundCardLabel.Name = "SoundCardLabel";
             this.SoundCardLabel.Size = new System.Drawing.Size(120, 17);
@@ -113,6 +114,7 @@
             // CPULabel
             // 
             this.CPULabel.AutoSize = true;
+            this.CPULabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CPULabel.Location = new System.Drawing.Point(338, 160);
             this.CPULabel.Name = "CPULabel";
             this.CPULabel.Size = new System.Drawing.Size(80, 17);
@@ -122,6 +124,7 @@
             // GPULabel
             // 
             this.GPULabel.AutoSize = true;
+            this.GPULabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GPULabel.Location = new System.Drawing.Point(338, 120);
             this.GPULabel.Name = "GPULabel";
             this.GPULabel.Size = new System.Drawing.Size(192, 17);
@@ -131,6 +134,7 @@
             // PrinterLabel
             // 
             this.PrinterLabel.AutoSize = true;
+            this.PrinterLabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PrinterLabel.Location = new System.Drawing.Point(338, 80);
             this.PrinterLabel.Name = "PrinterLabel";
             this.PrinterLabel.Size = new System.Drawing.Size(72, 17);
@@ -140,6 +144,7 @@
             // OSLabel
             // 
             this.OSLabel.AutoSize = true;
+            this.OSLabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.OSLabel.Location = new System.Drawing.Point(338, 40);
             this.OSLabel.Name = "OSLabel";
             this.OSLabel.Size = new System.Drawing.Size(168, 17);
@@ -149,6 +154,7 @@
             // BIOSLabel
             // 
             this.BIOSLabel.AutoSize = true;
+            this.BIOSLabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BIOSLabel.Location = new System.Drawing.Point(18, 120);
             this.BIOSLabel.Name = "BIOSLabel";
             this.BIOSLabel.Size = new System.Drawing.Size(248, 17);
@@ -158,6 +164,7 @@
             // DiskLabel
             // 
             this.DiskLabel.AutoSize = true;
+            this.DiskLabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DiskLabel.Location = new System.Drawing.Point(18, 200);
             this.DiskLabel.Name = "DiskLabel";
             this.DiskLabel.Size = new System.Drawing.Size(48, 17);
@@ -167,6 +174,7 @@
             // TemperatureLabel
             // 
             this.TemperatureLabel.AutoSize = true;
+            this.TemperatureLabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.TemperatureLabel.Location = new System.Drawing.Point(18, 160);
             this.TemperatureLabel.Name = "TemperatureLabel";
             this.TemperatureLabel.Size = new System.Drawing.Size(96, 17);
@@ -176,6 +184,7 @@
             // NetworkCardLabel
             // 
             this.NetworkCardLabel.AutoSize = true;
+            this.NetworkCardLabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NetworkCardLabel.Location = new System.Drawing.Point(18, 80);
             this.NetworkCardLabel.Name = "NetworkCardLabel";
             this.NetworkCardLabel.Size = new System.Drawing.Size(112, 17);
@@ -185,6 +194,7 @@
             // MainInfoLabel
             // 
             this.MainInfoLabel.AutoSize = true;
+            this.MainInfoLabel.Font = new System.Drawing.Font("JetBrains Mono", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MainInfoLabel.Location = new System.Drawing.Point(18, 40);
             this.MainInfoLabel.Name = "MainInfoLabel";
             this.MainInfoLabel.Size = new System.Drawing.Size(216, 17);

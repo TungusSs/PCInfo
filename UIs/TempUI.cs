@@ -8,11 +8,21 @@ namespace PCInfos.UIs
 {
     public partial class TempUI : UserControl
     {
+        // Элемент списка для отображения информации о процессоре
         public ListViewItem cpu_item = null;
+
+        // Список температур процессора
         public ArrayList cpuTemper = null;
+
+        // Список сетевых интерфейсов
         public ArrayList networkList = null;
+
+        // Класс для чтения температур процессора
         private CpuTemperatureReader cpuCelsius;
 
+        /// <summary>
+        /// Конструктор, инициализирующий компонент и запускающий поток для получения температур процессора
+        /// </summary>
         public TempUI()
         {
             InitializeComponent();
@@ -29,6 +39,9 @@ namespace PCInfos.UIs
             thread4.Start();
         }
 
+        /// <summary>
+        /// Метод для получения и отображения температур процессора
+        /// </summary>
         private void GetCpuTemperatures()
         {
             bool isDarkTheme = Theme.IsDarkTheme();
@@ -76,6 +89,9 @@ namespace PCInfos.UIs
             tempList.EndUpdate();
         }
 
+        /// <summary>
+        /// Метод для обновления температур процессора в списке
+        /// </summary>
         public void UpdateCPUTemperatures()
         {
             // Получаем температуры ЦПУ
@@ -109,6 +125,9 @@ namespace PCInfos.UIs
             }
         }
 
+        /// <summary>
+        /// Метод-обработчик таймера, вызывающий обновление температур процессора
+        /// </summary>
         private void timer1_Tick(object sender, EventArgs e)
         {
             Invoke((EventHandler)(delegate

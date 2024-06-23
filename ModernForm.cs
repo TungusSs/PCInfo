@@ -28,27 +28,9 @@ namespace PCInfos
             Theme.SaveTheme(dark); 
         }
 
-        private void guna2Button1_Click_1(object sender, System.EventArgs e)
-        {
-            renderP.Controls.Clear();
-            MainInfo mi = new MainInfo();
-            renderP.Controls.Add(mi);
-            mi.BringToFront();
-            loadTheme();
-        }
-
-        private void guna2ToggleSwitch1_CheckedChanged_1(object sender, System.EventArgs e)
+        private void swithTheme_CheckedChanged(object sender, System.EventArgs e)
         {
             togleTheme(swithTheme.Checked);
-        }
-
-        private void guna2Button1_Click(object sender, System.EventArgs e)
-        {
-            renderP.Controls.Clear();
-            MainInfo mi = new MainInfo();
-            renderP.Controls.Add(mi);
-            mi.BringToFront();
-            loadTheme();
         }
 
         private void panelNetworkCardBtn_Click(object sender, System.EventArgs e)
@@ -69,7 +51,16 @@ namespace PCInfos
             loadTheme();
         }
 
-        private void guna2Button1_Click_2(object sender, System.EventArgs e)
+        private void panelmainBtnOn_Click(object sender, System.EventArgs e)
+        {
+            renderP.Controls.Clear();
+            MainInfo mi = new MainInfo();
+            renderP.Controls.Add(mi);
+            mi.BringToFront();
+            loadTheme();
+        }
+
+        private void panelTempBtn_Click(object sender, System.EventArgs e)
         {
             renderP.Controls.Clear();
             TempUI mi = new TempUI();
@@ -78,7 +69,7 @@ namespace PCInfos
             loadTheme();
         }
 
-        private void guna2Button2_Click(object sender, System.EventArgs e)
+        private void panelDiskBtn_Click(object sender, System.EventArgs e)
         {
             renderP.Controls.Clear();
             DiskUI mi = new DiskUI();
@@ -87,7 +78,7 @@ namespace PCInfos
             loadTheme();
         }
 
-        private void guna2Button3_Click(object sender, System.EventArgs e)
+        private void panelOSBtn_Click(object sender, System.EventArgs e)
         {
             renderP.Controls.Clear();
             OperationSystemUI mi = new OperationSystemUI();
@@ -96,7 +87,7 @@ namespace PCInfos
             loadTheme();
         }
 
-        private void guna2Button4_Click(object sender, System.EventArgs e)
+        private void panelPrintersBtn_Click(object sender, System.EventArgs e)
         {
             renderP.Controls.Clear();
             PrintersUI mi = new PrintersUI();
@@ -105,7 +96,7 @@ namespace PCInfos
             loadTheme();
         }
 
-        private void guna2Button5_Click(object sender, System.EventArgs e)
+        private void panelGraphCardBtn_Click(object sender, System.EventArgs e)
         {
             renderP.Controls.Clear();
             VideocardUI mi = new VideocardUI();
@@ -114,7 +105,7 @@ namespace PCInfos
             loadTheme();
         }
 
-        private void guna2Button6_Click(object sender, System.EventArgs e)
+        private void panelCPUBtn_Click(object sender, System.EventArgs e)
         {
             renderP.Controls.Clear();
             cpuUI mi = new cpuUI();
@@ -123,7 +114,7 @@ namespace PCInfos
             loadTheme();
         }
 
-        private void guna2Button7_Click(object sender, System.EventArgs e)
+        private void panelSoundCardBtn_Click(object sender, System.EventArgs e)
         {
             renderP.Controls.Clear();
             SoundCard mi = new SoundCard();
@@ -132,7 +123,7 @@ namespace PCInfos
             loadTheme();
         }
 
-        private void guna2Button8_Click(object sender, System.EventArgs e)
+        private void panelSettingsBtn_Click(object sender, System.EventArgs e)
         {
             renderP.Controls.Clear();
             SettingsUI mi = new SettingsUI();

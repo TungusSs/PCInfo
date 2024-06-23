@@ -8,31 +8,40 @@ namespace PCInfos.UIs
 {
     public partial class VideocardUI : UserControl
     {
+        /// <summary>
+        /// Конструктор, инициализирующий компонент и запускающий поток для получения данных о видеокартах.
+        /// </summary>
         public VideocardUI()
         {
             InitializeComponent();
+            // Создаем и запускаем новый поток для получения информации о видеокартах
             Thread thread2 = new Thread(delegate () {
+                // Используем Invoke для безопасного обновления UI из другого потока
                 Invoke((EventHandler)(delegate
                 {
+                    // Получаем информацию о видеокартах и отображаем её
                     GetVideoInfo();
                 }));
             });
             thread2.Start();
         }
 
+        /// <summary>
+        /// Метод для получения и отображения информации о видеокартах.
+        /// </summary>
         private void GetVideoInfo()
         {
-            // Очищаем вкладки
+            // Очищаем все вкладки
             tabControl1.TabPages.Clear();
 
             // Создаем объект ManagementObjectSearcher для получения информации о видеокартах
             ManagementObjectSearcher myVideoObject = new ManagementObjectSearcher("select * from Win32_VideoController");
 
-            // Получаем количество найденных видеокарт
-            //int videoCount = myVideoObject.Get().Count;
+            // Проверяем, активна ли темная тема
             bool isDarkTheme = Theme.IsDarkTheme();
             Theme theme = new Theme(isDarkTheme);
-            // Начинаем добавлять закладки для каждой найденной видеокарты
+
+            // Начинаем добавлять вкладки для каждой найденной видеокарты
             int tabPageIndex = 1;
             foreach (ManagementObject obj in myVideoObject.Get())
             {
@@ -54,8 +63,10 @@ namespace PCInfos.UIs
                 TabPage tabPage = new TabPage();
                 tabPage.Name = "tabPage" + tabPageIndex;
                 tabPage.Text = videoName;
+                // Устанавливаем цвет фона и текста вкладки в зависимости от темы
                 tabPage.BackColor = theme.getBackColor();
                 tabPage.ForeColor = theme.getForeColor();
+
                 // Создаем метку для отображения информации о видеокарте на вкладке
                 Label label = new Label();
                 label.AutoSize = true;
@@ -75,7 +86,6 @@ namespace PCInfos.UIs
                 // Добавляем метку на вкладку и добавляем вкладку в элемент управления TabControl
                 tabPage.Controls.Add(label);
                 tabPageIndex++;
-
 
                 // Добавляем вкладку в элемент управления TabControl
                 tabControl1.TabPages.Add(tabPage);

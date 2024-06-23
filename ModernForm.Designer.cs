@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.swithTheme = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.renderP = new System.Windows.Forms.FlowLayoutPanel();
+            this.welcomeUI1 = new PCInfos.WelcomeUI();
             this.panelLeft = new System.Windows.Forms.FlowLayoutPanel();
             this.panelmainBtnOn = new Guna.UI2.WinForms.Guna2Button();
             this.panelNetworkCardBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -53,7 +54,6 @@
             this.panelCPUBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panelSoundCardBtn = new Guna.UI2.WinForms.Guna2Button();
             this.panelSettingsBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.welcomeUI1 = new PCInfos.WelcomeUI();
             this.statusStrip1.SuspendLayout();
             this.headerPanel.SuspendLayout();
             this.renderP.SuspendLayout();
@@ -98,10 +98,10 @@
             // NameSloganLabel
             // 
             this.NameSloganLabel.AutoSize = true;
-            this.NameSloganLabel.Font = new System.Drawing.Font("JetBrains Mono SemiBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.NameSloganLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.NameSloganLabel.Location = new System.Drawing.Point(4, 3);
             this.NameSloganLabel.Name = "NameSloganLabel";
-            this.NameSloganLabel.Size = new System.Drawing.Size(397, 25);
+            this.NameSloganLabel.Size = new System.Drawing.Size(314, 24);
             this.NameSloganLabel.TabIndex = 6;
             this.NameSloganLabel.Text = "PCInfo - True definition of quality";
             // 
@@ -156,7 +156,7 @@
             this.swithTheme.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.swithTheme.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.swithTheme.UncheckedState.InnerColor = System.Drawing.Color.White;
-            this.swithTheme.CheckedChanged += new System.EventHandler(this.guna2ToggleSwitch1_CheckedChanged_1);
+            this.swithTheme.CheckedChanged += new System.EventHandler(this.swithTheme_CheckedChanged);
             // 
             // renderP
             // 
@@ -166,6 +166,13 @@
             this.renderP.Name = "renderP";
             this.renderP.Size = new System.Drawing.Size(754, 554);
             this.renderP.TabIndex = 4;
+            // 
+            // welcomeUI1
+            // 
+            this.welcomeUI1.Location = new System.Drawing.Point(3, 3);
+            this.welcomeUI1.Name = "welcomeUI1";
+            this.welcomeUI1.Size = new System.Drawing.Size(751, 548);
+            this.welcomeUI1.TabIndex = 0;
             // 
             // panelLeft
             // 
@@ -195,7 +202,7 @@
             this.panelmainBtnOn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.panelmainBtnOn.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelmainBtnOn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
-            this.panelmainBtnOn.Font = new System.Drawing.Font("JetBrains Mono ExtraBold", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.panelmainBtnOn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.panelmainBtnOn.ForeColor = System.Drawing.Color.White;
             this.panelmainBtnOn.Location = new System.Drawing.Point(3, 27);
             this.panelmainBtnOn.Margin = new System.Windows.Forms.Padding(3, 27, 3, 3);
@@ -203,7 +210,7 @@
             this.panelmainBtnOn.Size = new System.Drawing.Size(191, 45);
             this.panelmainBtnOn.TabIndex = 0;
             this.panelmainBtnOn.Text = "Общая информация о системе";
-            this.panelmainBtnOn.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.panelmainBtnOn.Click += new System.EventHandler(this.panelmainBtnOn_Click);
             // 
             // panelNetworkCardBtn
             // 
@@ -257,7 +264,7 @@
             this.panelTempBtn.Size = new System.Drawing.Size(191, 40);
             this.panelTempBtn.TabIndex = 3;
             this.panelTempBtn.Text = "Температуры";
-            this.panelTempBtn.Click += new System.EventHandler(this.guna2Button1_Click_2);
+            this.panelTempBtn.Click += new System.EventHandler(this.panelTempBtn_Click);
             // 
             // panelDiskBtn
             // 
@@ -275,7 +282,7 @@
             this.panelDiskBtn.Size = new System.Drawing.Size(191, 40);
             this.panelDiskBtn.TabIndex = 4;
             this.panelDiskBtn.Text = "Диски";
-            this.panelDiskBtn.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.panelDiskBtn.Click += new System.EventHandler(this.panelDiskBtn_Click);
             // 
             // panelOSBtn
             // 
@@ -293,7 +300,7 @@
             this.panelOSBtn.Size = new System.Drawing.Size(191, 40);
             this.panelOSBtn.TabIndex = 5;
             this.panelOSBtn.Text = "Операционная система";
-            this.panelOSBtn.Click += new System.EventHandler(this.guna2Button3_Click);
+            this.panelOSBtn.Click += new System.EventHandler(this.panelOSBtn_Click);
             // 
             // panelPrintersBtn
             // 
@@ -311,7 +318,7 @@
             this.panelPrintersBtn.Size = new System.Drawing.Size(191, 40);
             this.panelPrintersBtn.TabIndex = 6;
             this.panelPrintersBtn.Text = "Принтера";
-            this.panelPrintersBtn.Click += new System.EventHandler(this.guna2Button4_Click);
+            this.panelPrintersBtn.Click += new System.EventHandler(this.panelPrintersBtn_Click);
             // 
             // panelGraphCardBtn
             // 
@@ -329,7 +336,7 @@
             this.panelGraphCardBtn.Size = new System.Drawing.Size(191, 40);
             this.panelGraphCardBtn.TabIndex = 7;
             this.panelGraphCardBtn.Text = "Информация о видеокарте";
-            this.panelGraphCardBtn.Click += new System.EventHandler(this.guna2Button5_Click);
+            this.panelGraphCardBtn.Click += new System.EventHandler(this.panelGraphCardBtn_Click);
             // 
             // panelCPUBtn
             // 
@@ -347,7 +354,7 @@
             this.panelCPUBtn.Size = new System.Drawing.Size(191, 40);
             this.panelCPUBtn.TabIndex = 8;
             this.panelCPUBtn.Text = "Процессор";
-            this.panelCPUBtn.Click += new System.EventHandler(this.guna2Button6_Click);
+            this.panelCPUBtn.Click += new System.EventHandler(this.panelCPUBtn_Click);
             // 
             // panelSoundCardBtn
             // 
@@ -365,7 +372,7 @@
             this.panelSoundCardBtn.Size = new System.Drawing.Size(191, 40);
             this.panelSoundCardBtn.TabIndex = 9;
             this.panelSoundCardBtn.Text = "Звуковая карта";
-            this.panelSoundCardBtn.Click += new System.EventHandler(this.guna2Button7_Click);
+            this.panelSoundCardBtn.Click += new System.EventHandler(this.panelSoundCardBtn_Click);
             // 
             // panelSettingsBtn
             // 
@@ -383,14 +390,7 @@
             this.panelSettingsBtn.Size = new System.Drawing.Size(191, 40);
             this.panelSettingsBtn.TabIndex = 10;
             this.panelSettingsBtn.Text = "Настройки";
-            this.panelSettingsBtn.Click += new System.EventHandler(this.guna2Button8_Click);
-            // 
-            // welcomeUI1
-            // 
-            this.welcomeUI1.Location = new System.Drawing.Point(3, 3);
-            this.welcomeUI1.Name = "welcomeUI1";
-            this.welcomeUI1.Size = new System.Drawing.Size(751, 548);
-            this.welcomeUI1.TabIndex = 0;
+            this.panelSettingsBtn.Click += new System.EventHandler(this.panelSettingsBtn_Click);
             // 
             // ModernForm
             // 
