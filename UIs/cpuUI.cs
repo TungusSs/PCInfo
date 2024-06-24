@@ -7,15 +7,21 @@ namespace PCInfos.UIs
 {
     public partial class cpuUI : UserControl
     {
+        /// <summary>
+        /// Конструктор, инициализирующий компонент и запускающий поток для получения данных о процессоре.
+        /// </summary>
         public cpuUI()
         {
             InitializeComponent();
+            // Создаем и запускаем новый поток для получения информации о процессоре
             Thread th = new Thread(delegate ()
             {
+                // Используем Invoke для безопасного обновления UI из другого потока
                 Invoke((EventHandler)(delegate
                 {
-                    // Устанавливаем размер и шрифт для маркера
+                    // Устанавливаем размер и шрифт для метки
                     maininfolabel.Font = new System.Drawing.Font("JetBrains Mono", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 204);
+                    // Получаем информацию о процессоре и устанавливаем её в текст метки
                     maininfolabel.Text = GetProcessorInfo();
                 }));
             });
@@ -25,12 +31,17 @@ namespace PCInfos.UIs
             // Таким образом, приложение продолжает работать и не блокируется во время выполнения операции получения информации.
         }
 
-        // Объявляем метод GetProcessorInfo(), который возвращает информацию о процессоре в виде строки
+        /// <summary>
+        /// Метод для получения информации о процессоре.
+        /// </summary>
+        /// <returns>Строка с информацией о процессоре.</returns>
         public string GetProcessorInfo()
         {
             string processorInfo = ""; // Создаем строку, в которую будем добавлять информацию о процессоре
-                                       // Создаем объект для поиска информации о процессоре
+
+            // Создаем объект для поиска информации о процессоре
             ManagementObjectSearcher myProcessorObject = new ManagementObjectSearcher("select * from Win32_Processor");
+
             // Для каждого объекта, найденного с помощью поиска, добавляем информацию в строку processorInfo
             foreach (ManagementObject obj in myProcessorObject.Get())
             {
@@ -47,12 +58,12 @@ namespace PCInfos.UIs
                 processorInfo += "Тип процессора - " + obj["ProcessorType"] + Environment.NewLine; // Тип процессора
                 processorInfo += "Характеристики - " + obj["Characteristics"] + Environment.NewLine; // Характеристики процессора
                 processorInfo += "Ширина адреса - " + obj["AddressWidth"] + Environment.NewLine; // Ширина адреса процессора
-                                                                                                 // Определяем производителя процессора по имени и устанавливаем соответствующее изображение
+
+                // Определяем производителя процессора по имени и устанавливаем соответствующее изображение
                 string manufacturer = obj["Manufacturer"].ToString().ToLower();
                 if (manufacturer.Contains("intel"))
                 {
                     pictureBox1.Image = Properties.Resources.intel;
-                    
                 }
                 else if (manufacturer.Contains("amd"))
                 {
@@ -61,7 +72,5 @@ namespace PCInfos.UIs
             }
             return processorInfo; // Возвращаем строку с информацией о процессоре
         }
-
-
     }
 }

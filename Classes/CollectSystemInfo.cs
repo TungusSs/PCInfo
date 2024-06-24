@@ -3,9 +3,15 @@ using System.Management;
 
 namespace PCInfos
 {
+    /// <summary>
+    /// Статический класс для сбора информации о системе.
+    /// </summary>
     public static class CollectSystemInfo
     {
-        // Получение информации об операционной системе
+        /// <summary>
+        /// Получение информации об операционной системе.
+        /// </summary>
+        /// <returns>Информация об операционной системе в виде строки.</returns>
         public static string GetOperatingSystemInfo()
         {
             string systemInfo = "";
@@ -21,7 +27,11 @@ namespace PCInfos
             return systemInfo;
         }
 
-        public static string GetUserNameAndPcName() 
+        /// <summary>
+        /// Получение имени пользователя и имени компьютера.
+        /// </summary>
+        /// <returns>Имя компьютера и имя пользователя в виде строки.</returns>
+        public static string GetUserNameAndPcName()
         {
             string systemInfo = "";
             ManagementObjectSearcher searcher = new ManagementObjectSearcher("SELECT Caption, Version, InstallDate, BuildNumber, SerialNumber, CSName FROM Win32_OperatingSystem");
@@ -33,7 +43,10 @@ namespace PCInfos
             return systemInfo + Environment.UserName;
         }
 
-        // Получение информации о процессоре
+        /// <summary>
+        /// Получение информации о процессоре.
+        /// </summary>
+        /// <returns>Информация о процессоре в виде строки.</returns>
         public static string GetProcessorInfo()
         {
             string systemInfo = "";
@@ -49,7 +62,10 @@ namespace PCInfos
             return systemInfo;
         }
 
-        // Получение информации о памяти
+        /// <summary>
+        /// Получение информации о памяти.
+        /// </summary>
+        /// <returns>Информация о памяти в виде строки.</returns>
         public static string GetMemoryInfo()
         {
             string systemInfo = "";
@@ -64,7 +80,10 @@ namespace PCInfos
             return systemInfo;
         }
 
-        // Получение информации о типе системы
+        /// <summary>
+        /// Получение информации о типе системы.
+        /// </summary>
+        /// <returns>Информация о типе системы в виде строки.</returns>
         public static string GetSystemTypeInfo()
         {
             string systemInfo = "";
@@ -77,7 +96,10 @@ namespace PCInfos
             return systemInfo;
         }
 
-        // Получение информации об устройствах графики
+        /// <summary>
+        /// Получение информации об устройствах графики.
+        /// </summary>
+        /// <returns>Информация об устройствах графики в виде строки.</returns>
         public static string GetGraphicsInfo()
         {
             string graphicsInfo = "";
@@ -90,7 +112,10 @@ namespace PCInfos
             return graphicsInfo;
         }
 
-        // Получение информации об устройствах хранения
+        /// <summary>
+        /// Получение информации об устройствах хранения.
+        /// </summary>
+        /// <returns>Информация об устройствах хранения в виде строки.</returns>
         public static string GetStorageInfo()
         {
             string systemInfo = "";
@@ -103,7 +128,10 @@ namespace PCInfos
             return systemInfo;
         }
 
-        // Получение информации об оптических устройствах
+        /// <summary>
+        /// Получение информации об оптических устройствах.
+        /// </summary>
+        /// <returns>Информация об оптических устройствах в виде строки.</returns>
         public static string GetOpticalDriveInfo()
         {
             string systemInfo = "";

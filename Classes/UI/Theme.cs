@@ -1,8 +1,11 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using Guna.UI2.WinForms;
-using System.IO; 
+using System.IO;
 
+/// <summary>
+/// Класс для управления темами приложения.
+/// </summary>
 public class Theme
 {
     public Color BackgroundColor { get; set; }
@@ -10,6 +13,10 @@ public class Theme
     public Color PanelColor { get; set; }
     public Color Header { get; set; }
 
+    /// <summary>
+    /// Конструктор, устанавливающий цвета темы в зависимости от переданного параметра.
+    /// </summary>
+    /// <param name="dark">Если true, устанавливается тёмная тема, иначе светлая.</param>
     public Theme(bool dark)
     {
         if (dark)
@@ -28,16 +35,28 @@ public class Theme
         }
     }
 
+    /// <summary>
+    /// Метод для получения цвета фона.
+    /// </summary>
+    /// <returns>Цвет фона.</returns>
     public Color getBackColor()
     {
         return BackgroundColor;
-    } 
-    
+    }
+
+    /// <summary>
+    /// Метод для получения цвета переднего плана.
+    /// </summary>
+    /// <returns>Цвет переднего плана.</returns>
     public Color getForeColor()
     {
         return ForegroundColor;
     }
 
+    /// <summary>
+    /// Применяет текущую тему к указанному элементу управления и его дочерним элементам.
+    /// </summary>
+    /// <param name="control">Элемент управления, к которому применяется тема.</param>
     public void ApplyTheme(Control control)
     {
         control.BackColor = BackgroundColor;
@@ -53,9 +72,8 @@ public class Theme
             control.BackColor = Header;
         }
 
-        if (control is Guna2ContainerControl)
+        if (control is Guna2ContainerControl gunaControl)
         {
-            var gunaControl = control as Guna2ContainerControl;
             gunaControl.FillColor = BackgroundColor;
         }
 
@@ -65,12 +83,20 @@ public class Theme
         }
     }
 
+    /// <summary>
+    /// Сохраняет текущую тему в файл.
+    /// </summary>
+    /// <param name="isDark">Если true, сохраняется тёмная тема, иначе светлая.</param>
     public static void SaveTheme(bool isDark)
     {
         string theme = isDark ? "dark" : "light";
         File.WriteAllText("theme.txt", theme);
     }
 
+    /// <summary>
+    /// Загружает тему из файла.
+    /// </summary>
+    /// <returns>Возвращает true, если тема тёмная, иначе false.</returns>
     public static bool LoadTheme()
     {
         try
@@ -84,6 +110,10 @@ public class Theme
         }
     }
 
+    /// <summary>
+    /// Проверяет, является ли текущая тема тёмной.
+    /// </summary>
+    /// <returns>Возвращает true, если тема тёмная, иначе false.</returns>
     public static bool IsDarkTheme()
     {
         return LoadTheme();

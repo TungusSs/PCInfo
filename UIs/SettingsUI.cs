@@ -6,11 +6,17 @@ namespace PCInfos.UIs
 {
     public partial class SettingsUI : UserControl
     {
+        /// <summary>
+        /// Конструктор, инициализирующий компонент и настраивающий элементы управления.
+        /// </summary>
         public SettingsUI()
         {
             InitializeComponent();
+
+            // Устанавливаем состояние CheckBox в зависимости от текущих настроек
             modernstyyleCheck.Checked = SettingsHelper.getVisualGui();
 
+            // Создаем объект ToolTip для отображения подсказок
             ToolTip toolTip = new ToolTip();
             toolTip.SetToolTip(MainInfoLabel, "Информация о системе, модель устройства,\nсвободная оперативная память");
             toolTip.SetToolTip(NetworkCardLabel, "Информация о подключениях, MAC-адрес,\nпинг и т.п.");
@@ -24,9 +30,14 @@ namespace PCInfos.UIs
             toolTip.SetToolTip(SoundCardLabel, "Информация о звуковой карте, названии продукта,\nстатусе, ID устройства");
         }
 
+        /// <summary>
+        /// Обработчик события изменения состояния CheckBox.
+        /// </summary>
         private void modernstyyleCheck_CheckedChanged(object sender, EventArgs e)
         {
+            // Обновляем настройки в зависимости от состояния CheckBox
             SettingsHelper.setVisualGui(modernstyyleCheck.Checked);
+            // Сохраняем обновленные настройки
             SettingsHelper.SaveSettings();
         }
     }
