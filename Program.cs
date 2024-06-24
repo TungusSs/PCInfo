@@ -15,33 +15,36 @@ namespace PCInfos
         [STAThread]
         static void Main()
         {
-
-            // Проверяем, запущено ли приложение с правами администратора
+            // Проверяем, запущено ли приложение с правами администратора.
             if (!IsRunAsAdmin())
             {
-                // Получаем имя приложения и аргументы командной строки
+                // Получаем имя приложения и аргументы командной строки.
                 string fileName = Application.ExecutablePath;
                 string arguments = string.Join(" ", Environment.GetCommandLineArgs().Skip(1));
 
-                // Запускаем процесс с правами администратора
-                ProcessStartInfo psi = new ProcessStartInfo(fileName, arguments);
-                psi.Verb = "runas"; // Запускаем с правами администратора
+                // Запускаем процесс с правами администратора.
+                ProcessStartInfo psi = new ProcessStartInfo(fileName, arguments)
+                {
+                    Verb = "runas" // Запускаем с правами администратора.
+                };
                 Process.Start(psi);
 
-                // Закрываем текущее приложение
+                // Закрываем текущее приложение.
                 Application.Exit();
             }
             else
             {
+                // Проверяем, использовать ли визуальный интерфейс.
                 if (SettingsHelper.getVisualGui())
                 {
-                    // Запускаем главное окно приложения
+                    // Запускаем главное окно приложения с современным интерфейсом.
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(new ModernForm());
                 }
                 else
                 {
+                    // Запускаем главное окно приложения с классическим интерфейсом.
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
                     Application.Run(new Main());
@@ -50,9 +53,9 @@ namespace PCInfos
         }
 
         /// <summary>
-        /// Проверяем, запущено ли приложение с правами администратора
+        /// Проверяем, запущено ли приложение с правами администратора.
         /// </summary>
-        /// <returns>Возвращает true, если приложение запущено с правами администратора</returns>
+        /// <returns>Возвращает true, если приложение запущено с правами администратора.</returns>
         public static bool IsRunAsAdmin()
         {
             WindowsIdentity identity = WindowsIdentity.GetCurrent();
