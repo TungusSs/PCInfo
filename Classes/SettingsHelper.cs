@@ -5,23 +5,41 @@ namespace PCInfos.Classes
 {
     public class SettingsHelper
     {
+        // Путь к директории настроек
         private static string settingsDirectory = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "PCInfos");
+        // Путь к файлу настроек
         private static string settingsFilePath = Path.Combine(settingsDirectory, "settings.pcinfo");
 
+        // Свойство для хранения состояния графического интерфейса
         private static bool moderngui { get; set; }
 
+        /// <summary>
+        /// Метод для получения значения настройки графического интерфейса.
+        /// </summary>
+        /// <returns>Значение настройки графического интерфейса.</returns>
         public static bool getVisualGui()
         {
             return moderngui;
         }
 
-        public static void setVisualGui(bool value) { moderngui = value; }
+        /// <summary>
+        /// Метод для установки значения настройки графического интерфейса.
+        /// </summary>
+        /// <param name="value">Новое значение настройки графического интерфейса.</param>
+        public static void setVisualGui(bool value)
+        {
+            moderngui = value;
+        }
 
+        // Статический конструктор, вызывающий метод инициализации настроек
         static SettingsHelper()
         {
             InitializeSettings();
         }
 
+        /// <summary>
+        /// Метод для инициализации настроек. Создает директорию и файл настроек, если они отсутствуют.
+        /// </summary>
         private static void InitializeSettings()
         {
             if (!Directory.Exists(settingsDirectory))
@@ -40,6 +58,9 @@ namespace PCInfos.Classes
             }
         }
 
+        /// <summary>
+        /// Метод для загрузки настроек из файла.
+        /// </summary>
         private static void LoadSettings()
         {
             try
@@ -59,7 +80,6 @@ namespace PCInfos.Classes
                             case "ModernGUI":
                                 moderngui = bool.Parse(settingValue);
                                 break;
-
                         }
                     }
                 }
@@ -70,13 +90,16 @@ namespace PCInfos.Classes
             }
         }
 
+        /// <summary>
+        /// Метод для сохранения текущих настроек в файл.
+        /// </summary>
         public static void SaveSettings()
         {
             try
             {
                 string[] lines = {
-                $"ModernGUI={moderngui}",
-            };
+                    $"ModernGUI={moderngui}",
+                };
 
                 File.WriteAllLines(settingsFilePath, lines);
             }

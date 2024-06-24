@@ -4,10 +4,16 @@ using System.Collections;
 
 namespace PCInfos
 {
+    /// <summary>
+    /// Класс для чтения температуры процессора с использованием LibreHardwareMonitor.
+    /// </summary>
     class CpuTemperatureReader : IDisposable
     {
         private Computer _computer;
 
+        /// <summary>
+        /// Конструктор класса, инициализирующий мониторинг процессора.
+        /// </summary>
         public CpuTemperatureReader()
         {
             // Этот фрагмент кода создает новый экземпляр класса Computer и включает опцию мониторинга состояния процессора (IsCpuEnabled = true).
@@ -20,13 +26,16 @@ namespace PCInfos
             _computer.Open();
         }
 
-        // Метод для получения температуры ЦПУ
+        /// <summary>
+        /// Метод для получения температур ЦПУ в градусах Цельсия.
+        /// </summary>
+        /// <returns>Список температур в виде ArrayList.</returns>
         public ArrayList GetTemperaturesInCelsius()
         {
             ArrayList temperatures_list = new ArrayList();
             try
             {
-                // Обход всех устройств и датчиков для получения температуры
+                // Обход всех устройств и датчиков для получения температуры.
                 foreach (var hardware in _computer.Hardware)
                 {
                     hardware.Update(); // обновление информации об устройствах (можно использовать hardware.Name для получения модели ЦПУ)
@@ -46,12 +55,17 @@ namespace PCInfos
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message); // выводим сообщение об ошибке в консоль, если что-то пошло не так
+                // выводим сообщение об ошибке в консоль, если что-то пошло не так
+                Console.WriteLine(ex.Message);
             }
 
-            return temperatures_list;// возвращаем список с температурами
+            // возвращаем список с температурами
+            return temperatures_list;
         }
 
+        /// <summary>
+        /// Метод для освобождения ресурсов и закрытия мониторинга.
+        /// </summary>
         public void Dispose()
         {
             try
@@ -60,6 +74,7 @@ namespace PCInfos
             }
             catch (Exception)
             {
+                // Можно добавить обработку исключения при закрытии.
             }
         }
     }
